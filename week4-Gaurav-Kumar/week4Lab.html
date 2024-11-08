@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello! This is week 4 Lab</h1>
+    <script>
+
+let numbers = [8, 9, 8, 5, 7, 5, 8, 8, 5, 0, 4, 3];
+let countOfFive = 0;
+
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] === 5) {
+        countOfFive++;
+    }
+}
+
+console.log("The number 5 appears " + countOfFive + " times in the array.");
+
+let frequency = Array(10).fill(0); 
+
+for (let i = 0; i < numbers.length; i++) {
+    frequency[numbers[i]]++;
+}
+let mostregularNumber = 0;
+let maxFrequency = 0;
+
+for (let i = 0; i < frequency.length; i++) {
+    if (frequency[i] > maxFrequency) {
+        maxFrequency = frequency[i];
+        mostFrequentNumber = i;
+    }
+}
+
+console.log("The most regular number is " + mostregularNumber + " with " + maxFrequency + " occurrences.");
+    </script>
+</body>
+</html>

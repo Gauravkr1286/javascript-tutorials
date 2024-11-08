@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+//this application will show the user the list of jokes types and ask them to choose a type. After they've chosen, a joke of that type will be shown to them.
+fetch ("https://official-joke-api.appspot.com/types")
+.then(function(typesArray){
+let chosenType=prompt("The types are "+ typesArray+"Please choose one.")
+console.log(chosenType);
+
+fetch("https://official-joke-api.appspot.com/jokes/"+ chosenType+"/random");
+
+}) // get the redeable stream, convert to object (array).
+.then() //we have types as an array.Use prompt to get desire type. Make a request to the API for a joke of the desired type.
+.then()//We now have response to our request for a joke, convert to an object.
+.then()// Display the jokes.
+    </script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
+
+    <h1 id="heading">Hello Document Object Model</h1>
+    <p id="tagline">Let's make user interface with javascript</p>
+    <Form id="form">
+        <label>
+        Please enter your first name:
+        <input type="text" name="first-name" />
+    </label>
+
+    <label>
+        Please enter your birth year:
+        <input type="number" name="birth year" />
+    </label>
+    </Form>
+
+    <input type="submit" value="submit" />
+    <script>
+        let mainHeading = document.getElementById("heading");
+        console.log(mainHeading.textContent);
+
+        mainHeading.textContent = "Another one+";
+
+        //css
+
+        mainHeading.style.color = "hotpink";
+        mainHeading.style.fontSize = "400%";
+
+
+        //we can change any css property this way, but instead of using kebab-case for property names, we use camelCase..//
+
+        // How to cahnge particular tag color//
+        let tagline = document.getElementById("tagline");
+        tagline.style.backgroundColor = "aquamarine";
+
+        //Events 
+        //Events allows our program to respind user actions like clicking, hovering the mouse cursor, typing, submitting forms, etc.//
+
+        //Listen for click events on the main heading . if the user clicks the heading, we'll call a function that displayan alert.
+
+        mainHeading.addEventListener("click", showAlert)
+        function showAlert(event) {
+            alert(event.currentTarget.textContent);
+
+        }
+
+        tagline.addEventListener("click", showAlert);
+        function showAlert() {
+            alert("You clicked!")
+        }
+
+        //Events with Forms
+        //Use the "Submit" event
+        let form = document.getElementById("form");
+form.addEventListener("submit", handleForSubmit);
+
+function handleFormSubmit(event){
+//by default will try to send the form to server side script. To prevent that...
+event.preventDefault();
+
+//show an alert with whichever text the user typed inro the first-name input.//
+
+//step 1: get the input element.
+let firstNameInput = document.getElementById("first-name");
+// step 2: get the data typed by the user...
+let text = firstNameInput.value; // contains data was entered by the user.
+//step 3: 
+
+alert(text);
+}
+
+    </script>
+</body>
+
+</html>

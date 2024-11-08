@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello array's 2</h1>
+
+    <script>
+        let todoList=[];
+
+        //ask user to type a task to add to the lsit, or "quit" the application and view their list. Should repeat indefinitely until they type "quit".
+
+        let nextItem;
+        while(nextItem != "quit"){
+            //get the next item ...
+nextItem=prompt("Enter the next item on your to do listor type quit");
+
+// add next item list .push
+
+todoList.push(nextItem);
+
+        }
+
+        console.log("Your to do list is "+ todoList);
+    </script>
+</body>
+</html>
