@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css?family=Dosis:400,700"
+      rel="stylesheet"
+    />
+    <link href="./style.css" rel="stylesheet" />
+
+    <script src="./index.js" defer></script>
+
+    <title>Recipe Box App</title>
+  </head>
+  <body>
+    <div id="root">
+
+      <header><h1>Recipe Box</h1></header>
+      <input type="radio" name="searchOptions" id="searchLetter" checked="checked"/>
+      <label for="searchLetter">Search by First Letter</label>
+      <input type="radio" name="searchOptions" id="searchName" />
+      <label for="searchName">Search by Meal Name</label>
+      <input id="searchItem" type="text" />
+      <button id="findItem">Search</button>
+      
+    </div>
+
+
+    <table>
+      <thead>
+        <th>Meal Name</th>
+        <th>Meal Type</th>
+        <th>Meal Origin</th>
+        <th>Select</th>
+      </thead>
+      <tbody id="mealTable">
+      </tbody>
+    </table>
+    
+    <div>
+      <button>More Info</button>
+    </div>
+    
+  </body>
+</html>
