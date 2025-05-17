@@ -1,0 +1,44 @@
+// Nested object example: Bookstore
+
+const bookstore = {
+  name: "Readers' Haven",
+  location: {
+    street: "123 Book St",
+    city: "Vancouver",
+    province: "BC",
+    postalCode: "V6B 1A1"
+  },
+  owner: {
+    name: "Alice Johnson",
+    contact: {
+      email: "alice@readershaven.ca",
+      phone: "604-123-4567"
+    }
+  },
+  books: [
+    {
+      title: "The Great Gatsby",
+      author: {
+        firstName: "F. Scott",
+        lastName: "Fitzgerald"
+      },
+      year: 1925,
+      genres: ["Fiction", "Classic"]
+    },
+    {
+      title: "1984",
+      author: {
+        firstName: "George",
+        lastName: "Orwell"
+      },
+      year: 1949,
+      genres: ["Dystopian", "Political Fiction"]
+    }
+  ]
+};
+
+// Accessing nested values
+console.log("Bookstore Name:", bookstore.name);
+console.log("City:", bookstore.location.city);
+console.log("Owner Email:", bookstore.owner.contact.email);
+console.log("First Book Author Last Name:", bookstore.books[0].author.lastName);
